@@ -49,7 +49,8 @@ def run_spark_job(spark):
         .select("DF.*")
 
     # TODO select original_crime_type_name and disposition
-    distinct_table = service_table.select("original_crime_type_name", "call_date_time","disposition")
+    distinct_table = service_table.select("original_crime_type_name", "call_date_time","disposition")\
+                        .withWatermark('call_date_time', "15 minute")
 
     # count the number of original crime type
     agg_df = distinct_table.groupBy("original_crime_type_name").count()
@@ -97,7 +98,7 @@ if __name__ == "__main__":
         .builder \
         .master("local[*]") \
         .appName("KafkaSparkStructuredStreaming") \
-        .config("spark.ui.port",4000)\
+        .config("spark.ui.port",3000)\
         .getOrCreate()
 
     logger.info("Spark started")

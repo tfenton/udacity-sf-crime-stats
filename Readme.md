@@ -40,7 +40,14 @@ This project is for the Udacity Streaming Data course. It takes data found in th
 
 ### Questions
 1. How did changing values on the SparkSession property parameters affect the throughput and latency of the data?
+> Changing `processedRowsPerSecond` increases/decreases throughput.
 2. What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
+>I monitored `processedRowsPerSecond` and saw values north of 300
+```
+spark.sql.shuffle.partitions                10
+spark.streaming.kafka.maxRatePerPartition   10
+spark.default.parallelism                   10000
+```
 
 
 
