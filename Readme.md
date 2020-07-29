@@ -30,14 +30,14 @@ In this project, we provide a statistical analyses of the data using Apache Spar
 `spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --master local[*] data_stream.py`
 
 ### kafka consumer output
-![Kafka console output](https://github.com/tfenton/udacity-sf-crime-stats/blob/master/Screen Shot - kafka topic.png)
+![Kafka console output](https://github.com/tfenton/udacity-sf-crime-stats/blob/master/screen_shot_kafka_topic.png)
 
 
 ### Streaming progress submission
-![Streaming submission](https://github.com/tfenton/udacity-sf-crime-stats/blob/master/Screen Shot - spark job submitted.png)
+![Streaming submission](https://github.com/tfenton/udacity-sf-crime-stats/blob/master/screen_shot_spark_submitted.png)
 
 ### Streaming progress running
-![Streaming running](https://github.com/tfenton/udacity-sf-crime-stats/blob/master/Screen Shot - spark job streaming.png)
+![Streaming running](https://github.com/tfenton/udacity-sf-crime-stats/blob/master/screen_shot_spark_running.png)
 
 
 
