@@ -1,8 +1,7 @@
 # Kafka and Spark Streaming Integration
 
 ## Overview
-
-In this project, we provide a statistical analyses of the data using Apache Spark Structured Streaming. We created a Kafka server to produce data, a test Kafka Consumer to consume data and ingest data through Spark Structured Streaming. Then we applied Spark Streaming windowing and filtering to aggregate the data and extract count on hourly basis.
+This project is for the Udacity Streaming Data course. It takes data found in the file `police-department-calls-for_service.json` and puts that data info a kafka topics. This data is then streamed into spark.
 
 ### Environment
 
@@ -39,6 +38,9 @@ In this project, we provide a statistical analyses of the data using Apache Spar
 ### Streaming progress running
 ![Streaming running](https://github.com/tfenton/udacity-sf-crime-stats/blob/master/screen_shot_spark_running.png)
 
+### Questions
+1. How did changing values on the SparkSession property parameters affect the throughput and latency of the data?
+2. What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
 
 
 
